@@ -1,9 +1,10 @@
 // JavaScript Document
 
 
-//John Williamson
+//Williamson, John
 //SDI 1306
-//Project 2
+//Project 3
+//indtructor : Lewis, Lee
 
 
 var myName = "Johan The Warrior of Awesomeness"

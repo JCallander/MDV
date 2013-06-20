@@ -7,22 +7,22 @@
 //indtructor : Lewis, Lee
 
 
-var myName = "Johan The Warrior of Awesomeness"
-var dragonFights = 1
-var dragon = "Dragon"
-var bow = "Bow"
-var arrow = "Arrows"
-var sword = "Sword of stellar performances"
-var myLife = 200
-var myHalfLife = 100
-var myMinLife = 1
-var tired = "so tired"
-var bored = true
-var swordHit = 12
+var myName = "Johan The Warrior of Awesomeness";
+var dragonFights = 1;
+var dragon = "Dragon";
+var bow = "Bow";
+var arrow = "Arrows";
+var sword = "Sword of Stellar Performances";
+var myLife = 200;
+var myHalfLife = 100;
+var myMinLife = 1;
+var tired = "so tired";
+var bored = true;
+var swordHit = 12;
 var swordPow = (Math.round(Math.random()*6)); //math method
-var dragonLife = 93
-var dragonMinLife = 12
-var myDefense = 19
+var dragonLife = 93;
+var dragonMinLife = 12;
+var myDefense = 19;
 var monsters = [
 	" Really Big Spider",
 	" Cyclops", 
@@ -30,9 +30,8 @@ var monsters = [
 ];
 
 
-var imBored = function(bored)
-{
-	if(bored = true)
+var imBored = function(bored){
+	if(bored == true)
 		{
 		console.log("There is never anything to do around this place.");
 		}
@@ -42,38 +41,28 @@ var imBored = function(bored)
 		}
 }
 
-var status = function(myName, tired)
-{
-	var string1 = ' "I am done here" '
+var status = function(myName, tired){
+	var string1 = ' "I think I\'m done here" '
 	var string2 = ' "I should get home before it gets too late." '
 		console.log(string1 + " " + string2)	
 }
 
-var living = function(myLife, myHalfLife)
-{
+var living = function(myLife, myHalfLife){
+	var imHealthy;
 	if(myLife > myHalfLife)
-		{
-		living = true
-		}
-	else
-		{
-		living = false
-		}
-		if(living = true)
 	{
 		console.log("Deciding that I feel well enough to continue I set off down the tunnels to see what I can explore.");
+		imHealthy = true
 	}
-else
+	else
 	{	
 		console.log("I should probably heal myself before I move on.");
+		imHealthy = false
 	}
-
-	return living
+	return imHealthy
 }
 
-
-var drogo = function(dragonLife)
-{
+var drogo = function(dragonLife){
 	do{
 	var swordAttack = (Math.round(Math.random()*6)+12)
 	var dragonHit = (Math.round(Math.random()*6)+28)	
@@ -98,15 +87,17 @@ var drogo = function(dragonLife)
 	return myLife
 }
 
+
 var monster = function(){
-	for (var m = 0; m < monsters.length; m++){
-		console.log("I shot the " + monsters[m] + " with the bow.");
+	for (var m = 0; m < monsters.length; m++)
+	{
+		var bowHit = (Math.round(Math.random()*8)+40)
+		console.log("I shot the " + monsters[m] + " with the bow doing " + bowHit + " damage.");
 	};
-		{
-			console.log("I managed to kill the" + monsters[2])
-			monsters.pop();
-		
-			return monsters
+	{
+		console.log("I managed to kill the" + monsters[2])
+		monsters.pop();	
+		return monsters
 	};
 }
 
@@ -122,4 +113,3 @@ var myMonsters = monster()
 console.log("the " + myMonsters + " ran away.");
 console.log("after all this excitement I decide that I am tired. so I say to myself.")
 status()
-console.log(living)

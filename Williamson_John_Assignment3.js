@@ -4,9 +4,9 @@
 //Williamson, John
 //SDI 1306
 //Project 3
-//indtructor : Lewis, Lee
+//instructor : Lewis, Lee
 
-/*
+
 var myName = "Johan The Warrior of Awesomeness";
 weapon = {
 	sword: {
@@ -35,51 +35,49 @@ var swordPow = (Math.round(Math.random()*6)); //math method
 var dragonLife = 93;
 var dragonMinLife = 12;
 var myDefense = 19;
+var falseResponse = "I will be doing my homework.";
+var trueResponse = "There is never anything to do around this place.";
+var goOnBro = "Deciding that I feel well enough to continue I set off down the tunnels to see what I can explore."
+var healUp = "I should probably heal myself before I move on."
 var monsters = {
-	spider: {
-		name: "Really Big Spider",
-		health: 60,
-		type: "Arachnid"
-	},
-	Cyclops: {
-		name: "Cyclops",
-		health: 58,
-		type: "Humanoid" 
-	},
-	baboon: {
-		name: "Undead Baboon",
-		health: 38,
-		type: "Undead"
-	}
-};
+		beasts: {
+			name: ["Really Big Spider", "Cyclops", "Undead Baboon"],
+			health: [60, 58, 38],
+			type: ["Arachnid", "Humanoid", "Undead" ]
+		}
+	};
 
-var monsterNames = "A " + monsters.spider.name + ", " + monsters.Cyclops.name + ", and an " + monsters.baboon.name;
+var monsterNamesLength = monsters.beasts.name.length;
+var monsterNames = monsters.beasts["name"];
+
 
 var imBored = function(bored){
 	if(bored == true)
 		{
-		console.log("There is never anything to do around this place.");
+		console.log(trueResponse);
 		}
 	else
 		{
-		console.log("I will be doing my homework.");
+		console.log(falseResponse);
 		}
 }
 
-var status = function(myName, tired){
-	var string1 = ' "I think I\'m done here" '
-	var string2 = ' "I should get home before it gets too late." '
-		console.log(string1 + " " + string2)	
+var status = function(leave, done){
+	var done = ' "I think I\'m done here" '
+	var leave = ' "I should get home before it gets too late." '
+		finished = done + " " + leave
+		console.log(finished);
+		return finished	
 }
 
 var living = function(myLife, myHalfLife){
 	var imHealthy;
 	if(myLife > myHalfLife){
-		console.log("Deciding that I feel well enough to continue I set off down the tunnels to see what I can explore.");
+		console.log(goOnBro);
 		imHealthy = true
 	}
 	else{	
-		console.log("I should probably heal myself before I move on.");
+		console.log(healUp);
 		imHealthy = false
 	}
 	return imHealthy
@@ -106,23 +104,19 @@ var drogo = function(dragonLife){
 		}
 	return dragonLife;
 	return myLife;
+	return weapon.bow;
 }
 
-*/
-var handleData = function (json) {
-	console.log(json);
-	};
-	handleData(json2)
-/*
-{
-	for (var m = 0; m < json.monsters.length; m++){
+var monster = function(){
+	for (var m = 0; m < monsterNamesLength; m++){
 		var bowShot = (Math.round(Math.random()*8)+40);
-		var monsters = json.monsters[m];
-		console.log("I shot the " + monsters.name + " with the bow doing " + bowShot + " damage.");
+		console.log("I shot the " + monsterNames + " with the bow doing " + bowShot + " damage.");
 	};
 	{
-		console.log("I managed to kill the" + monsters[2]);
-		monsters.pop();	
+		console.log("I managed to kill the " + monsters.beasts.name[2]);
+		monsters.beasts.name.pop()
+		monsters.beasts.type.pop()
+		monsters.beasts.health.pop()
 		return monsters;
 	};
 }
@@ -134,9 +128,8 @@ console.log("I figured since I had come this far I would go ahead and accept the
 var myOutcome = drogo(dragonLife);
 console.log("I retrieve the items the " + dragon + " dropped.");
 var myLiving = living(myLife, myHalfLife);
-console.log("While I was exploring a room I looked up and saw " + monster + " heading my way.");
-var myMonsters = monster(json);
-console.log("the " + myMonsters + " ran away.");
+console.log("While I was exploring a room I looked up and saw " + monsterNames + " heading my way.");
+var myMonsters = monster();
+console.log("the " + myMonsters.beasts.name + " ran away.");
 console.log("after all this excitement I decide that I am tired. so I say to myself.");
-status();
-*/
+var imComplete = status();

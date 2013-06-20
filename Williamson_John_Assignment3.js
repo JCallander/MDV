@@ -6,7 +6,7 @@
 //Project 3
 //indtructor : Lewis, Lee
 
-
+/*
 var myName = "Johan The Warrior of Awesomeness";
 weapon = {
 	sword: {
@@ -52,6 +52,7 @@ var monsters = {
 		type: "Undead"
 	}
 };
+
 var monsterNames = "A " + monsters.spider.name + ", " + monsters.Cyclops.name + ", and an " + monsters.baboon.name;
 
 var imBored = function(bored){
@@ -107,11 +108,17 @@ var drogo = function(dragonLife){
 	return myLife;
 }
 
-
-var monster = function(){
-	for (var m = 0; m < monsters.length; m++){
+*/
+var handleData = function (json) {
+	console.log(json);
+	};
+	handleData(json2)
+/*
+{
+	for (var m = 0; m < json.monsters.length; m++){
 		var bowShot = (Math.round(Math.random()*8)+40);
-		console.log("I shot the " + monsters[m] + " with the bow doing " + bowShot + " damage.");
+		var monsters = json.monsters[m];
+		console.log("I shot the " + monsters.name + " with the bow doing " + bowShot + " damage.");
 	};
 	{
 		console.log("I managed to kill the" + monsters[2]);
@@ -127,10 +134,9 @@ console.log("I figured since I had come this far I would go ahead and accept the
 var myOutcome = drogo(dragonLife);
 console.log("I retrieve the items the " + dragon + " dropped.");
 var myLiving = living(myLife, myHalfLife);
-console.log("While I was exploring a room I looked up and saw " + monsterNames + " heading my way.");
-var myMonsters = monster();
+console.log("While I was exploring a room I looked up and saw " + monster + " heading my way.");
+var myMonsters = monster(json);
 console.log("the " + myMonsters + " ran away.");
 console.log("after all this excitement I decide that I am tired. so I say to myself.");
 status();
-
-console.log(monsters)
+*/

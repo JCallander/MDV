@@ -1,15 +1,15 @@
 //alert("JavaScript works!");
 
 //This set turns each word in a string into an array based off of the spaces.
-/*
+
 var myString = "Man this is some hard work.";
 var myTextArray = myString.split(' ');
 console.log(myTextArray);
 
-//This set will not let you enter anything but a phone number
-
-var myString = prompt("Please enter Your Phone number", "xxx-xxx-xxxx");
-function checkCharType(charToCheck){
+//This set will not let you enter anything but a phone number. Kinda annoying if not held in check.
+/*
+			var myString = prompt("Please enter Your Phone number", "xxx-xxx-xxxx");
+function checkCharType(charToCheck) {
 	var returnValue = "O";
 	var charCode = charToCheck.charCodeAt(0);
 	
@@ -24,9 +24,8 @@ function checkCharType(charToCheck){
 	if (myString.charCodeAt(7) !== 45){
 		alert("Format should be ###-###-####");
 		location.reload();
-	};
-	
-	else if (charCode <="0".charCodeAt(0) || charCode >= "9".charCodeAt(0)){
+	};	
+	if (charCode <="0".charCodeAt(0) || charCode >= "9".charCodeAt(0)){
 		alert("Enter a real phone number");
 		location.reload();
 	};
@@ -37,7 +36,7 @@ switch (checkCharType(myString))
 	default:
 		alert("Thank You");
 }
-
+*/
 //This set will tell you if the value of something is of the correct pattern. 
 
 var isANumber = true
@@ -101,7 +100,7 @@ splitUpper("Man I am going to need to take a break soon.")
 console.log(result)
 
 
-*/
+
 
 //couldn't get this one figured out. moving on to different one will return when I have time.
 		/*
@@ -126,7 +125,7 @@ var myTextArray = myString.split(' ');
 console.log(myTextArray);
 			*/
  
- /*
+ 
 //This set will round the decimal to a provided number of places.
 
 var decimalPoint = function (num,places) {
@@ -150,7 +149,8 @@ var totalValOfNumbers = function (array) {
 
 console.log(totalValOfNumbers(theArray));
 
-*/
+//It took me close to two days to figure out that you were trying to get a true or false answer to this question. 
+//This set will determine if a number is greater or less than another number then if it is within a predetermined percent of said number.
 
 var fuzzy = function (numOne,numTwo,percent) {
 		var percentage = (numOne/numTwo) * 100;
@@ -162,3 +162,18 @@ var fuzzy = function (numOne,numTwo,percent) {
 	};
 	
 console.log(fuzzy(10,20,50));
+
+//I used this one several times while trying to figure out the array total question.
+//This set will take a string version of a number an make it a number.
+
+ var stringToNumber = function (number) {
+	return Number(number);
+};
+	
+var myString = "1234"
+parseInt(myString)
+
+console.log(myString)
+console.log(stringToNumber("5678"));
+
+

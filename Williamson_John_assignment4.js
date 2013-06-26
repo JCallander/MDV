@@ -103,7 +103,7 @@ console.log(result)
 
 */
 
-//couldn't get this one figured out. moving on to different one. 
+//couldn't get this one figured out. moving on to different one will return when I have time.
 		/*
 var cut = "";
 var result = "";
@@ -134,4 +134,31 @@ var decimalPoint = function (num,places) {
     };
 console.log(decimalPoint(19.7869,2));
 
+
+//This set took me a while but I finally was able to get it to only add the numbers.
+
+theArray = [5,"Japan",10,"Bob",15,"Home",20,"25"];
+var totalValOfNumbers = function (array) {
+	var total = 0;
+	for (var i = 0; i < array.length; i++) {
+		if (array[i]/1 === array[i]) {
+			total += array[i];
+		};
+	};
+	return total;
+};
+
+console.log(totalValOfNumbers(theArray));
+
 */
+
+var fuzzy = function (numOne,numTwo,percent) {
+		var percentage = (numOne/numTwo) * 100;
+		if ((numOne >= numTwo && percentage >= percent) || (numOne < numTwo && percentage < percent)) {
+			return false;
+		} else {
+			return true;
+		};
+	};
+	
+console.log(fuzzy(10,20,50));

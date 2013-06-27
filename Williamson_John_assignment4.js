@@ -1,12 +1,18 @@
 //alert("JavaScript works!");
 
+
+//Williamson, John
+//SDI 1306
+//Project 4
+//instructor : Lewis, Lee
+
 //This set turns each word in a string into an array based off of the spaces.
 
 var myString = "Man this is some hard work.";
 var myTextArray = myString.split(' ');
 console.log(myTextArray);
 
-//This set will not let you enter anything but a phone number. Kinda annoying if not held in check.
+//This set will not let you enter anything but a phone number. Kinda annoying if not held in check. Hence why it is commented out.
 /*
 			var myString = prompt("Please enter Your Phone number", "xxx-xxx-xxxx");
 function checkCharType(charToCheck) {
@@ -169,11 +175,16 @@ console.log(fuzzy(10,20,50));
  var stringToNumber = function (number) {
 	return Number(number);
 };
-	
-var myString = "1234"
-parseInt(myString)
+
+console.log(stringToNumber("5678"));
+
+//I am just separrating these two so that i am not graded as if they are one.
+//Plus I am not one hundred percent confident that I am using this one
+//correctly	
+
+var myString = "1234";
+parseInt(myString);
 
 console.log(myString)
-console.log(stringToNumber("5678"));
 
 
